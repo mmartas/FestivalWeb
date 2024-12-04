@@ -155,17 +155,14 @@ header
     background: black;
 }
 
-.nav-link a {
+.nav-link a, .footer-link a {
     text-decoration: none;
     color: white;
 }
 
-.nav-link a:hover {
+.nav-link a:hover, .footer-link a:hover {
     text-decoration: none;
-    color: black;
-    background: white;
-    border-radius: 10px;
-    padding: 5px;
+    color: grey;
 }
 
 footer {
@@ -186,13 +183,22 @@ footer {
 .fa-facebook-f {
     color: dodgerblue;
 }
+.fa-facebook-f:hover {
+    color: white;
+}
 
 .fa-instagram {
     color: deeppink;
 }
+.fa-instagram:hover {
+    color: white;
+}
 
 .fa-youtube-play {
     color: red;
+}
+.fa-youtube-play:hover {
+    color: white;
 }
 
 #contact {

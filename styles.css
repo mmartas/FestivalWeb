@@ -1,149 +1,208 @@
 ﻿* {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
+
 body
 {
     background-color: rgb(200, 200, 200);
     margin: 0;
 }
 
+.row {
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
 
-header
-{
+
+header {
     background: url("images/festival.jpg");
     background-size: cover;
     height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
-/* tečka je třída, element s třídou se může opakovat na webu*/
-.intro-container
-{
+/* HLAVNÍ NADPIS */
+.main-heading {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* tento příkaz posune text o 50% své délky*/
+    transform: translate(-50%, -50%);
     text-align: center;
     border: 3px solid black;
     padding: 0 40px;
     border-radius: 16px;
-    text-wrap: nowrap; /* při zmenšení text zůstane na jednom řádku*/
+    text-wrap: nowrap;
 }
 
-.intro-container h1
-{
+.main-heading h1 {
     font-size: 50px;
 }
 
-.intro-container p
-{
+.main-heading p {
     font-size: 28px;
 }
 
-.about-festival h2, .about-singers h2
-{
+/* OSTATNÍ HLAVNÍ NADPISY NA STRÁNCE */
+.about-festival h2, .heading-singers h2, .our-teams h2, .contact-container h2 {
     text-align: center;
-    margin-top: 60px;
-    font-size: 50px;
-    margin-bottom: 10px;
+    margin: 25px 0 10px 0;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
-.about-festival p
-{
-    font-size: 24px;
-    padding: 50px;
+/* O NÁS TEXT */
+.about-festival {
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
 }
-/* hashtag je id, které je vždy pouze jednou na webu*/
-#first-container
-{
+.about-festival p {
+    font-size: 24px;
+    padding: 25px 50px 25px 50px;
+    text-align: center;
+    margin: 0;
+}
+
+/* ZPĚVÁCI */
+.all-singers {
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.singers-card-taylor {
     background-color: rgb(255, 255, 255);
-    width: 700px;
-    margin: 100px auto 100px auto;
+    margin: 25px auto;
     padding: 24px;
     border-radius: 20px;
-    position: relative;
+    display: flex;
+    gap: 24px;
+    width: 80%;
 }
-
-/* absolutní pozice je vždy vůči nadřazenému elementu, který musí mít pozici relativní*/
-/* element s absolutní pozicí ignoruje tok dokumentu, to znamená že může překrývat ostatní elementy*/
-/* element s relativní pozicí je zahrnut do dokumentu*/
-/* pokud element s absolutní pozicí nemá nadřazený relativní element, tak se připne vůči body*/
-
-#first-container img
-{
-    border-radius: 20px;
-    position:absolute;
-    right: -10%;
-    top: -25%;
-}
-
-#second-container
-{
-    background-color:rgb(255, 255, 255);
-    width: 700px;
-    margin: 100px auto;
+.singers-card-ray {
+    background-color: rgb(255, 255, 255);
+    margin: 35px auto;
     padding: 24px;
     border-radius: 20px;
+    display: flex;
+    gap: 24px;
     text-align: right;
-    position: relative;
+    width: 80%;
 }
 
-#second-container img 
-{
+#taylor-img {
     border-radius: 20px;
-    position:absolute;
-    left: -10%;
-    top: -45%;
+    width: 200px;
 }
 
-.testimonials {
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
+#ray-img {
+    border-radius: 20px;
+    width: 200px;
 }
 
-.testimonials p {
-    font-size: 24px;
-}
-.testimonials h2 {
-    font-size: 48px;
+.heading-paragraph-ray p, .heading-paragraph-taylor p {
     margin-bottom: 0;
 }
 
-.testimonials-cards {
-    display: flex;
-    justify-content: space-between;
+/* NÁŠ TÝM */
+
+.our-teams {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding-bottom: 25px;
 }
 
-.testimonials-card {
+.our-teams p {
+    font-size: 24px;
+    padding: 25px 50px;
+    margin: 0;
+}
+
+.our-teams-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.our-teams-card {
     width: 25%;
     background: white;
     border-radius: 30px;
     padding: 20px 16px;
 }
 
-.testimonials-card p {
+.our-teams-card p {
     font-size: 16px;
     line-height: 1.5;
+    padding: 0;
 }
 
-.testimonials-card h3 {
+.our-teams-card h3 {
     font-size: 24px;
 }
 
-.testimonials-card h4 {
+.our-teams-card h4 {
     font-size: 20px;
     color: rgb(160, 160, 160);
     margin-bottom: 0;
 }
 
-.testimonials-card img {
+.our-teams-card img {
     border-radius: 50%;
     border: 5px solid rgb(200, 200, 200);
     width: 92px;
     height: 92px;
 }
 
+/* KONTAKTNÍ FORMULÁŘ */
+.contact-form {
+    width: 60%;
+    margin: 25px auto;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+input[type="button"] {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0 0 0;
+    background: black;
+    color: white;
+    border: none;
+}
+
+input[type="button"]:hover {
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0 0 0;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    font-size: 18px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+
+/* HLAVNÍ NAVIGACE V HLAVIČCE A V PATIČCE */
 .nav-links {
     display: flex;
     list-style: none;
@@ -153,6 +212,16 @@ header
     margin: 0;
     padding: 16px 0;
     background: black;
+}
+
+.footer-links {
+    color: white;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+    font-size: 20px;
 }
 
 .nav-link a, .footer-link a {
@@ -170,14 +239,14 @@ footer {
     background: black;
 }
 
-.social-icons .fa {
-    font-size: 24px;
-}
-
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.social-icons .fa {
+    font-size: 24px;
 }
 
 .fa-facebook-f {
@@ -201,23 +270,20 @@ footer {
     color: white;
 }
 
-#contact {
-    text-align: center;
-    font-size: 48px;
-}
-
-.footer-links {
-    color: white;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding: 0;
-    font-size: 20px;
-}
-
 .copyright {
     text-align: center;
     color: white;
     font-size: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
